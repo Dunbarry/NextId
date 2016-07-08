@@ -1,0 +1,45 @@
+var tallyMin=0;
+var tallyMax=0;
+var tallySub=0;
+var i=0;
+var j=0;
+var nextId = function (array){
+	while(i<array.length){
+	arrayStringObject = array;
+		for(scan=0; scan<arrayStringObject.length; scan++){
+			tallyMin=arrayStringObject[0];
+	    	if(arrayStringObject[scan]>tallyMax){				//setting Max//
+     			tallyMax=arrayStringObject[scan];
+    		}
+    			else if (arrayStringObject[scan]<tallyMax){ 		//setting Min//
+    				if(arrayStringObject[scan]<tallyMin){
+    				tallyMin=arrayStringObject[scan];
+    				}
+    			}
+		}
+	i++;
+	}
+
+	while(j<array.length){
+		arrayStringObject = array;
+		for(scan2=0; scan2<arrayStringObject.length; scan2++){ 	//Setting Submax//
+			if(arrayStringObject[scan2]<tallyMax){
+				if(arrayStringObject[scan2]>tallyMin){
+					tallySub=arrayStringObject[scan2];
+				}
+			}
+		}
+	j++;
+	console.log(tallyMax);
+	console.log(tallySub);
+if((tallySub+1)!==tallyMax){
+		console.log(tallySub+1);
+		return(tallySub+1);
+		}
+			else{
+			console.log(tallyMax+1);
+			return(tallyMax+1);
+			}
+	}
+};
+nextId([]);
